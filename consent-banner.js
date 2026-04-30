@@ -2,10 +2,10 @@
  * ============================================================
  * MAIA MANAGEMENT GROUP S.A.S.
  * NIT: 901.862.977-7
- * Cookie Consent Banner — Google Consent Mode v2 Compatible
+ * Cookie Consent Banner - Google Consent Mode v2 Compatible
  * ============================================================
  *
- * INTEGRATION ORDER (CRITICAL — READ BEFORE DEPLOYING):
+ * INTEGRATION ORDER (CRITICAL - READ BEFORE DEPLOYING):
  * 1. Load THIS script first, before any Google/Meta tags
  * 2. GTM or gtag.js snippet comes AFTER this script
  * 3. Meta Pixel snippet comes AFTER this script
@@ -26,8 +26,6 @@
  * - Rep. legal   : Andrew John Sidney Gallie, CE 8129525
  * - Address      : CR 1 # 19-61, Barrio Rodadero,
  *                  Santa Marta, Magdalena 470007, Colombia
- * - Email        : ajsgallie@gmail.com
- *   PENDING: migrate to custom domain email once available
  * - Complies with Ley 1581 de 2012 (Colombia) & GDPR basics
  * - Consent Mode v2: ad_storage, analytics_storage,
  *   ad_user_data, ad_personalization
@@ -41,7 +39,7 @@
     storageKey:      'maia_consent',
     version:         '1.0.0',
     expiryMs:        15552000000,
-    privacyPolicyUrl: '/privacy.html',
+    privacyPolicyUrl: '/privacy',
     colors: {
       navy:       '#1B2A4A',
       blue:       '#2E75B6',
