@@ -35,6 +35,12 @@
   force = true
 
 [[redirects]]
+  from = "/images/2026-04-26_maia-marketing_imagen_team-creative-session.png"
+  to = "/images/maia-marketing-team.webp"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/privacy"
   to = "/privacy.html"
   status = 200
