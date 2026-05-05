@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://marketing.maia-management.com/sitemap.xml
+Sitemap: https://maia-marketing.com/sitemap.xml
