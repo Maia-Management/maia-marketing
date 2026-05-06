@@ -2094,4 +2094,65 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
     payload.set('website', website);
     payload.set('goal', goal);
     payload.set('name', name);
-    payload.set('wh
+    payload.set('whatsapp', whatsapp);
+    payload.set('language', language);
+
+    var msg = 'Hi! I\u2019d like a free marketing audit for my business.' +
+      (website ? '\nWebsite: ' + website : '') +
+      '\nGoal: ' + goal +
+      '\nName: ' + name +
+      '\nLanguage: ' + language;
+    var waUrl = 'https://wa.me/19034598763?text=' + encodeURIComponent(msg);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: payload.toString()
+    }).catch(function(){})
+      .finally(function() {
+        document.getElementById('step2').classList.remove('active');
+        document.querySelector('.step-indicator').style.display = 'none';
+        document.querySelector('.wa-direct').style.display = 'none';
+        var success = document.getElementById('formSuccess');
+        success.classList.add('active');
+        if (form) form.setAttribute('data-submitted', 'true');
+        setTimeout(function() { window.open(waUrl, '_blank', 'noopener,noreferrer'); }, 800);
+      });
+  };
+
+  /* ----- Scroll reveal with IntersectionObserver ----- */
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  } else {
+    // Fallback: show all immediately
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  /* ----- Close mobile menu on outside click ----- */
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('mobileMenu');
+    var toggle = document.getElementById('mobileToggle');
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !toggle.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+})();
+</script>
+
+
+</body>
+</html>
