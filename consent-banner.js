@@ -24,8 +24,9 @@
  * - Legal entity : MAIA MANAGEMENT GROUP S.A.S.
  * - NIT          : 901.862.977-7
  * - Rep. legal   : Andrew John Sidney Gallie, CE 8129525
- * - Address      : CR 1 # 19-61, Barrio Rodadero,
- *                  Santa Marta, Magdalena 470007, Colombia
+ * - Address      : Calle 24 #3-99, Edificio Banco de Bogotá,
+ *                  Suite 1102, Level 11, Santa Marta,
+ *                  Magdalena, Colombia
  * - Complies with Ley 1581 de 2012 (Colombia) & GDPR basics
  * - Consent Mode v2: ad_storage, analytics_storage,
  *   ad_user_data, ad_personalization
@@ -217,7 +218,7 @@
     var btnSave = document.createElement('button'); btnSave.className = 'mcb-btn mcb-btn-save'; btnSave.id = 'mcb-save-custom'; btnSave.type = 'button'; btnSave.textContent = 'Guardar preferencias';
     panel.appendChild(btnSave);
     var footerNote = document.createElement('p'); footerNote.className = 'mcb-footer-note';
-    footerNote.innerHTML = 'MAIA MANAGEMENT GROUP S.A.S. \u2014 NIT 901.862.977-7 \u2014 CR 1 # 19-61, Barrio Rodadero, Santa Marta, Magdalena 470007, Colombia. Puedes cambiar tus preferencias en cualquier momento desde el pie de p\u00e1gina.';
+    footerNote.innerHTML = 'MAIA MANAGEMENT GROUP S.A.S. \u2014 NIT 901.862.977-7 \u2014 Calle 24 #3-99, Edificio Banco de Bogot\u00e1, Suite 1102, Level 11, Santa Marta, Magdalena, Colombia. Puedes cambiar tus preferencias en cualquier momento desde el pie de p\u00e1gina.';
     banner.appendChild(header); banner.appendChild(body); banner.appendChild(actions); banner.appendChild(panel); banner.appendChild(footerNote);
     overlay.appendChild(banner); document.body.appendChild(overlay);
   }
