@@ -176,14 +176,14 @@ main { overflow-x: hidden; max-width: 100%; }
 .section-label {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
+  gap: .6rem;
   font-family: var(--mono);
-  font-size: .62rem;
-  font-weight: 500;
+  font-size: clamp(.85rem, 1vw, 1rem);
+  font-weight: 700;
   color: var(--accent);
   letter-spacing: .1em;
   text-transform: uppercase;
-  margin-bottom: .85rem;
+  margin-bottom: 1rem;
 }
 .section-label::before {
   content: '';
