@@ -117,12 +117,12 @@ img { max-width: 100%; height: auto; display: block; }
   --border:      #232D3A;
   --border-fine: #1A2330;
 
-  /* Text */
-  --ink:   #F0F5FA;
-  --ink-2: #C4D4E4;
-  --ink-3: #8FA8C0;
-  --muted: #7F9AB4;
-  --faint: #7890A8;
+  /* Text — WCAG AAA against #080C10 bg */
+  --ink:   #F0F5FA;  /* ~14.6:1 */
+  --ink-2: #C4D4E4;  /* ~10.4:1 */
+  --ink-3: #8FA8C0;  /* ~7.97:1 */
+  --muted: #A3B6CC;  /* ~9.46:1 (was #7F9AB4, 6.71:1 — failed AAA) */
+  --faint: #99B0C8;  /* ~8.79:1 (was #7890A8, 5.94:1 — failed AAA) */
 
   /* Teal accent */
   --accent:      #19A898;
@@ -149,7 +149,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ----- BASE ----- */
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17px;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -157,7 +157,8 @@ body {
   font-family: var(--sans);
   background: var(--bg);
   color: var(--ink-3);
-  line-height: 1.65;
+  font-weight: 425;
+  line-height: 1.72;
   overflow-x: hidden;
   max-width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -205,8 +206,8 @@ main { overflow-x: hidden; max-width: 100%; }
 
 .section-sub {
   color: var(--ink-3);
-  font-size: .95rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 425;
   max-width: 560px;
   line-height: 1.75;
 }
@@ -300,12 +301,12 @@ main { overflow-x: hidden; max-width: 100%; }
 .nav-wordmark-primary em { font-style: italic; color: var(--accent); }
 .nav-wordmark-sub {
   font-family: var(--mono);
-  font-size: .58rem;
-  font-weight: 400;
+  font-size: .78rem;
+  font-weight: 500;
   color: var(--muted);
   letter-spacing: .06em;
   line-height: 1.2;
-  margin-top: .1rem;
+  margin-top: .15rem;
 }
 
 .nav-links {
@@ -415,7 +416,7 @@ main { overflow-x: hidden; max-width: 100%; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 7rem 1.25rem 5rem;
+  padding: 5.5rem 1.25rem 2.25rem;
   overflow: hidden;
 }
 
@@ -508,7 +509,7 @@ main { overflow-x: hidden; max-width: 100%; }
   display: flex;
   flex-wrap: wrap;
   gap: .85rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.75rem;
 }
 
 /* Social proof bar */
@@ -551,19 +552,19 @@ main { overflow-x: hidden; max-width: 100%; }
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 8rem 2.5rem 6rem; }
+  .hero { padding: 6rem 2.5rem 3rem; }
 }
 
 /* ----- ADVANTAGE (WHY MAIA) ----- */
 .advantage {
-  padding: 5.5rem 1.25rem;
+  padding: 3rem 1.25rem;
   background: var(--surface);
   border-top: 1px solid var(--border-fine);
   border-bottom: 1px solid var(--border-fine);
 }
 
 .advantage-header {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .advantage-grid {
@@ -615,17 +616,17 @@ main { overflow-x: hidden; max-width: 100%; }
   .advantage-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .advantage { padding: 6.5rem 2.5rem; }
+  .advantage { padding: 3.5rem 2.5rem; }
   .advantage-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ----- SERVICES ----- */
 .services {
-  padding: 5.5rem 1.25rem;
+  padding: 3rem 1.25rem;
 }
 
 .services-header {
-  margin-bottom: 3rem;
+  margin-bottom: 1.75rem;
 }
 
 .services-grid {
@@ -702,19 +703,19 @@ main { overflow-x: hidden; max-width: 100%; }
   .services-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .services { padding: 6.5rem 2.5rem; }
+  .services { padding: 3.5rem 2.5rem; }
 }
 
 /* ----- CASE STUDIES ----- */
 .case-studies {
-  padding: 5.5rem 1.25rem;
+  padding: 3rem 1.25rem;
   background: var(--surface);
   border-top: 1px solid var(--border-fine);
   border-bottom: 1px solid var(--border-fine);
 }
 
 .case-studies-header {
-  margin-bottom: 3rem;
+  margin-bottom: 1.75rem;
 }
 
 .cs-grid {
@@ -803,16 +804,16 @@ main { overflow-x: hidden; max-width: 100%; }
   .cs-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .case-studies { padding: 6.5rem 2.5rem; }
+  .case-studies { padding: 3.5rem 2.5rem; }
   .cs-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ----- INDUSTRIES ----- */
 .industries {
-  padding: 5.5rem 1.25rem;
+  padding: 3rem 1.25rem;
 }
 
-.industries-header { margin-bottom: 3rem; }
+.industries-header { margin-bottom: 1.75rem; }
 
 .ind-grid {
   display: grid;
@@ -865,23 +866,23 @@ main { overflow-x: hidden; max-width: 100%; }
   .ind-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .industries { padding: 6.5rem 2.5rem; }
+  .industries { padding: 3.5rem 2.5rem; }
 }
 
 /* ----- PRICING ----- */
 .pricing {
-  padding: 5.5rem 1.25rem;
+  padding: 3rem 1.25rem;
   background: var(--surface);
   border-top: 1px solid var(--border-fine);
   border-bottom: 1px solid var(--border-fine);
 }
 .pricing-header { margin-bottom: .75rem; }
 .pricing-sub {
-  font-size: .88rem;
+  font-size: .95rem;
   color: var(--ink-3);
   max-width: 560px;
   line-height: 1.7;
-  margin-bottom: 3rem;
+  margin-bottom: 1.75rem;
 }
 
 .pricing-grid {
@@ -999,14 +1000,14 @@ main { overflow-x: hidden; max-width: 100%; }
   .pricing-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .pricing { padding: 6.5rem 2.5rem; }
+  .pricing { padding: 3.5rem 2.5rem; }
 }
 
 /* ----- CONTACT / AUDIT ----- */
 .contact {
-  padding: 5.5rem 1.25rem;
+  padding: 3rem 1.25rem;
 }
-.contact-header { margin-bottom: 3rem; }
+.contact-header { margin-bottom: 1.75rem; }
 
 .contact-wrap {
   display: grid;
@@ -1230,7 +1231,7 @@ main { overflow-x: hidden; max-width: 100%; }
 .contact-detail-row svg { color: var(--accent); flex-shrink: 0; }
 
 @media (min-width: 768px) {
-  .contact { padding: 6.5rem 2.5rem; }
+  .contact { padding: 3.5rem 2.5rem; }
   .contact-wrap { grid-template-columns: 1fr 380px; }
   .audit-form-box { padding: 2.25rem 2rem; }
 }
@@ -1239,7 +1240,7 @@ main { overflow-x: hidden; max-width: 100%; }
 footer {
   background: var(--surface);
   border-top: 1px solid var(--border-fine);
-  padding: 3rem 1.25rem 2rem;
+  padding: 2rem 1.25rem 1.5rem;
   overflow: hidden;
 }
 
@@ -1253,33 +1254,34 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--border-fine);
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .footer-brand { max-width: 320px; }
 .footer-brand-logo {
   font-family: var(--serif);
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.45rem;
+  font-weight: 500;
   color: var(--ink);
   letter-spacing: -0.02em;
   margin-bottom: .45rem;
 }
 .footer-brand-logo em { font-style: italic; color: var(--accent); }
 .footer-brand p {
-  font-size: .8rem;
-  color: var(--muted);
+  font-size: .95rem;
+  font-weight: 425;
+  color: var(--ink-2);
   line-height: 1.65;
   margin-top: .5rem;
 }
 
 .footer-links-col h5 {
   font-family: var(--mono);
-  font-size: .62rem;
-  font-weight: 500;
-  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--ink-2);
   letter-spacing: .1em;
   text-transform: uppercase;
   margin-bottom: .85rem;
@@ -1288,11 +1290,12 @@ footer {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: .45rem;
+  gap: .55rem;
 }
 .footer-links-col ul a {
-  font-size: .82rem;
-  color: var(--ink-3);
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--ink-2);
   text-decoration: none;
   transition: color .2s;
 }
@@ -1307,18 +1310,20 @@ footer {
 }
 .footer-copy {
   font-family: var(--mono);
-  font-size: .62rem;
-  color: var(--muted);
-  line-height: 1.6;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  line-height: 1.65;
 }
 .footer-legal {
   font-family: var(--mono);
-  font-size: .6rem;
-  color: var(--faint);
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--ink-3);
 }
 
 @media (min-width: 768px) {
-  footer { padding: 4rem 2.5rem 2.5rem; }
+  footer { padding: 2.5rem 2.5rem 1.75rem; }
 }
 
 /* ----- WHATSAPP FAB ----- */
@@ -1861,13 +1866,13 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
         <div class="form-step active" id="step1">
           <div class="form-title"><span data-lang="en" style="display:none">Tell us about your business</span><span data-lang="es">Cuéntanos sobre tu negocio</span></div>
           <div class="form-group">
-            <label for="website">Your business website URL</label>
-            <input type="url" id="website" name="website" placeholder="https://yourbusiness.com" autocomplete="url">
+            <label for="website"><span data-lang="en" style="display:none">Your business website URL</span><span data-lang="es">URL del sitio web de tu empresa</span></label>
+            <input type="url" id="website" name="website" placeholder="https://tuempresa.com" autocomplete="url">
           </div>
           <div class="form-group">
-            <label for="goal">What's your primary goal right now?</label>
+            <label for="goal"><span data-lang="en" style="display:none">What's your primary goal right now?</span><span data-lang="es">¿Cuál es tu objetivo principal en este momento?</span></label>
             <select id="goal" name="goal">
-              <option value="" disabled selected>Select your main goal…</option>
+              <option value="" disabled selected>Selecciona tu objetivo principal…</option>
               <option value="more-leads">More leads &amp; inquiries</option>
               <option value="better-conversions">Better conversions from existing traffic</option>
               <option value="local-visibility">Local visibility &amp; Google Maps</option>
@@ -1876,7 +1881,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
             </select>
           </div>
           <div class="form-btn-row">
-            <button type="button" class="btn-form-next" onclick="nextStep()">Next: Contact Details →</button>
+            <button type="button" class="btn-form-next" onclick="nextStep()"><span data-lang="en" style="display:none">Next: Contact Details →</span><span data-lang="es">Siguiente: Datos de Contacto →</span></button>
           </div>
         </div>
 
@@ -1957,7 +1962,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-architecture" style="padding:3rem 0 2rem;border-bottom:1px solid rgba(128,128,128,0.15)">
+    <div class="footer-architecture" style="padding:1.75rem 0 1.25rem;border-bottom:1px solid rgba(128,128,128,0.15)">
       <div style="max-width:780px;margin:0 auto;text-align:center">
         <p style="font-size:0.95rem;letter-spacing:0.02em;color:var(--ink-2);margin:0 0 1rem;font-weight:500">
           <span data-lang="en" style="display:none">Maia Marketing operates on the Maia Group infrastructure.</span>
@@ -1967,7 +1972,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
           <span data-lang="en" style="display:none">We provide unified legal, operational, and physical assets for foreign capital, expats, and enterprise clients scaling in Colombia. One ecosystem. Absolute accountability.</span>
           <span data-lang="es">Proveemos activos legales, operacionales y físicos unificados para capital extranjero, expatriados y clientes empresariales que escalan en Colombia. Un ecosistema. Responsabilidad absoluta.</span>
         </p>
-        <nav class="footer-utility-nav" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:#888">
+        <nav class="footer-utility-nav" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0;font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3)">
           <a href="https://maia-legal.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Legal Infrastructure</span><span data-lang="es">Infraestructura Legal</span></a>
           <a href="https://maia-management.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Talent Management</span><span data-lang="es">Gestión de Talento</span></a>
           <a href="https://maia-realty.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Real Estate</span><span data-lang="es">Bienes Raíces</span></a>
@@ -1978,7 +1983,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
       </div>
     </div>
 
-    <div class="footer-bottom" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1.5rem;padding:2rem 0 1.5rem;font-size:0.75rem;color:#777;line-height:1.7">
+    <div class="footer-bottom" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1.5rem;padding:2rem 0 1.5rem;font-size:0.9rem;font-weight:500;color:var(--ink-3);line-height:1.7">
       <div class="footer-copy">
         <div style="font-weight:500;color:var(--ink-2);margin-bottom:0.25rem">Maia Marketing</div>
         <span data-lang="en" style="display:none">A division of Maia Management Group S.A.S.</span><span data-lang="es">Una división de Maia Management Group S.A.S.</span><br>
@@ -1990,7 +1995,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
         <a href="/terms" style="color:var(--ink-3);text-decoration:none;margin-left:1rem"><span data-lang="en" style="display:none">Terms</span><span data-lang="es">Términos</span></a>
         <button type="button" onclick="if(window.MaiaConsent)window.MaiaConsent.reopenBanner();" style="color:var(--ink-3);background:none;border:0;padding:0;font:inherit;cursor:pointer;margin-left:1rem"><span data-lang="en" style="display:none">Cookie Preferences</span><span data-lang="es">Preferencias de Cookies</span></button>
         <a href="#contact" style="color:var(--ink-3);text-decoration:none;margin-left:1rem"><span data-lang="en" style="display:none">Contact</span><span data-lang="es">Contacto</span></a>
-        <div style="margin-top:0.75rem;font-size:0.75rem;color:var(--ink-3)">© 2026 Maia Management Group S.A.S. · <span data-lang="en" style="display:none">All rights reserved</span><span data-lang="es">Todos los derechos reservados</span>.</div>
+        <div style="margin-top:0.75rem;font-size:0.85rem;font-weight:500;color:var(--ink-3)">© 2026 Maia Management Group S.A.S. · <span data-lang="en" style="display:none">All rights reserved</span><span data-lang="es">Todos los derechos reservados</span>.</div>
       </div>
     </div>
   </div>
