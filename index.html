@@ -1921,7 +1921,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
         </div>
 
         <!-- WhatsApp direct link -->
-        <a href="https://wa.me/19034598763?text=Hi%2C%20I%27d%20like%20to%20request%20a%20free%20marketing%20audit%20for%20my%20business." class="wa-direct" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/19034598763?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20auditor%C3%ADa%20de%20marketing%20gratuita%20para%20mi%20negocio." class="wa-direct" target="_blank" rel="noopener noreferrer">
           <span data-lang="en" style="display:none">Prefer WhatsApp? Message us directly →</span><span data-lang="es">¿Prefieres WhatsApp? Escríbenos directamente →</span>
         </a>
       </form>
@@ -1932,7 +1932,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
           <h3>Direct Contact</h3>
           <div class="contact-detail-row">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="https://wa.me/19034598763?text=Hi%2C%20I%27d%20like%20to%20talk%20about%20Maia%20Marketing." target="_blank" rel="noopener noreferrer">WhatsApp +1 903 459 8763</a>
+            <a href="https://wa.me/19034598763?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20Maia%20Marketing." target="_blank" rel="noopener noreferrer">WhatsApp +1 903 459 8763</a>
           </div>
           <div class="contact-detail-row">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -2104,11 +2104,11 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
     payload.set('whatsapp', whatsapp);
     payload.set('language', language);
 
-    var msg = 'Hi! I\u2019d like a free marketing audit for my business.' +
-      (website ? '\nWebsite: ' + website : '') +
-      '\nGoal: ' + goal +
-      '\nName: ' + name +
-      '\nLanguage: ' + language;
+    var msg = '\u00a1Hola! Me gustar\u00eda una auditor\u00eda de marketing gratuita para mi negocio.' +
+      (website ? '\nSitio web: ' + website : '') +
+      '\nObjetivo: ' + goal +
+      '\nNombre: ' + name +
+      '\nIdioma: ' + language;
     var waUrl = 'https://wa.me/19034598763?text=' + encodeURIComponent(msg);
 
     fetch('/', {
