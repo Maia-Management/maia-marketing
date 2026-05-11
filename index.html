@@ -117,12 +117,12 @@ img { max-width: 100%; height: auto; display: block; }
   --border:      #232D3A;
   --border-fine: #1A2330;
 
-  /* Text */
-  --ink:   #F0F5FA;
-  --ink-2: #C4D4E4;
-  --ink-3: #8FA8C0;
-  --muted: #7F9AB4;
-  --faint: #7890A8;
+  /* Text — WCAG AAA against #080C10 bg */
+  --ink:   #F0F5FA;  /* ~14.6:1 */
+  --ink-2: #C4D4E4;  /* ~10.4:1 */
+  --ink-3: #8FA8C0;  /* ~7.97:1 */
+  --muted: #A3B6CC;  /* ~9.46:1 (was #7F9AB4, 6.71:1 — failed AAA) */
+  --faint: #99B0C8;  /* ~8.79:1 (was #7890A8, 5.94:1 — failed AAA) */
 
   /* Teal accent */
   --accent:      #19A898;
@@ -149,7 +149,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ----- BASE ----- */
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17px;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -157,7 +157,8 @@ body {
   font-family: var(--sans);
   background: var(--bg);
   color: var(--ink-3);
-  line-height: 1.65;
+  font-weight: 425;
+  line-height: 1.72;
   overflow-x: hidden;
   max-width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -205,8 +206,8 @@ main { overflow-x: hidden; max-width: 100%; }
 
 .section-sub {
   color: var(--ink-3);
-  font-size: .95rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 425;
   max-width: 560px;
   line-height: 1.75;
 }
@@ -300,12 +301,12 @@ main { overflow-x: hidden; max-width: 100%; }
 .nav-wordmark-primary em { font-style: italic; color: var(--accent); }
 .nav-wordmark-sub {
   font-family: var(--mono);
-  font-size: .58rem;
-  font-weight: 400;
+  font-size: .78rem;
+  font-weight: 500;
   color: var(--muted);
   letter-spacing: .06em;
   line-height: 1.2;
-  margin-top: .1rem;
+  margin-top: .15rem;
 }
 
 .nav-links {
@@ -1261,25 +1262,26 @@ footer {
 .footer-brand { max-width: 320px; }
 .footer-brand-logo {
   font-family: var(--serif);
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.45rem;
+  font-weight: 500;
   color: var(--ink);
   letter-spacing: -0.02em;
   margin-bottom: .45rem;
 }
 .footer-brand-logo em { font-style: italic; color: var(--accent); }
 .footer-brand p {
-  font-size: .8rem;
-  color: var(--muted);
+  font-size: .95rem;
+  font-weight: 425;
+  color: var(--ink-2);
   line-height: 1.65;
   margin-top: .5rem;
 }
 
 .footer-links-col h5 {
   font-family: var(--mono);
-  font-size: .62rem;
-  font-weight: 500;
-  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--ink-2);
   letter-spacing: .1em;
   text-transform: uppercase;
   margin-bottom: .85rem;
@@ -1288,11 +1290,12 @@ footer {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: .45rem;
+  gap: .55rem;
 }
 .footer-links-col ul a {
-  font-size: .82rem;
-  color: var(--ink-3);
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--ink-2);
   text-decoration: none;
   transition: color .2s;
 }
@@ -1307,14 +1310,16 @@ footer {
 }
 .footer-copy {
   font-family: var(--mono);
-  font-size: .62rem;
-  color: var(--muted);
-  line-height: 1.6;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  line-height: 1.65;
 }
 .footer-legal {
   font-family: var(--mono);
-  font-size: .6rem;
-  color: var(--faint);
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--ink-3);
 }
 
 @media (min-width: 768px) {
@@ -1967,7 +1972,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
           <span data-lang="en" style="display:none">We provide unified legal, operational, and physical assets for foreign capital, expats, and enterprise clients scaling in Colombia. One ecosystem. Absolute accountability.</span>
           <span data-lang="es">Proveemos activos legales, operacionales y físicos unificados para capital extranjero, expatriados y clientes empresariales que escalan en Colombia. Un ecosistema. Responsabilidad absoluta.</span>
         </p>
-        <nav class="footer-utility-nav" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:#888">
+        <nav class="footer-utility-nav" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0;font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3)">
           <a href="https://maia-legal.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Legal Infrastructure</span><span data-lang="es">Infraestructura Legal</span></a>
           <a href="https://maia-management.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Talent Management</span><span data-lang="es">Gestión de Talento</span></a>
           <a href="https://maia-realty.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Real Estate</span><span data-lang="es">Bienes Raíces</span></a>
@@ -1978,7 +1983,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
       </div>
     </div>
 
-    <div class="footer-bottom" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1.5rem;padding:2rem 0 1.5rem;font-size:0.75rem;color:#777;line-height:1.7">
+    <div class="footer-bottom" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1.5rem;padding:2rem 0 1.5rem;font-size:0.9rem;font-weight:500;color:var(--ink-3);line-height:1.7">
       <div class="footer-copy">
         <div style="font-weight:500;color:var(--ink-2);margin-bottom:0.25rem">Maia Marketing</div>
         <span data-lang="en" style="display:none">A division of Maia Management Group S.A.S.</span><span data-lang="es">Una división de Maia Management Group S.A.S.</span><br>
@@ -1990,7 +1995,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
         <a href="/terms" style="color:var(--ink-3);text-decoration:none;margin-left:1rem"><span data-lang="en" style="display:none">Terms</span><span data-lang="es">Términos</span></a>
         <button type="button" onclick="if(window.MaiaConsent)window.MaiaConsent.reopenBanner();" style="color:var(--ink-3);background:none;border:0;padding:0;font:inherit;cursor:pointer;margin-left:1rem"><span data-lang="en" style="display:none">Cookie Preferences</span><span data-lang="es">Preferencias de Cookies</span></button>
         <a href="#contact" style="color:var(--ink-3);text-decoration:none;margin-left:1rem"><span data-lang="en" style="display:none">Contact</span><span data-lang="es">Contacto</span></a>
-        <div style="margin-top:0.75rem;font-size:0.75rem;color:var(--ink-3)">© 2026 Maia Management Group S.A.S. · <span data-lang="en" style="display:none">All rights reserved</span><span data-lang="es">Todos los derechos reservados</span>.</div>
+        <div style="margin-top:0.75rem;font-size:0.85rem;font-weight:500;color:var(--ink-3)">© 2026 Maia Management Group S.A.S. · <span data-lang="en" style="display:none">All rights reserved</span><span data-lang="es">Todos los derechos reservados</span>.</div>
       </div>
     </div>
   </div>
