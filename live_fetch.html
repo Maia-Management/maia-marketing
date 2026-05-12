@@ -1,14 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <script src="/consent-banner.js?v=20260430a" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maia Marketing | Growth Systems for Colombia</title>
-<meta name="description" content="Growth systems and digital marketing for tourism, professional services, and expat businesses on Colombia's Caribbean coast. Real data, predictable revenue.">
+<meta name="description" content="Digital marketing and growth systems for tourism, professional services, and expat-owned businesses on Colombia's Caribbean coast. Real data, predictable revenue.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://maia-marketing.com/">
-<link rel="author" href="https://maia-marketing.com">
 <!-- hreflang — bilingual EN/ES site -->
 <link rel="alternate" hreflang="en" href="https://maia-marketing.com/">
 <link rel="alternate" hreflang="es" href="https://maia-marketing.com/">
@@ -35,8 +34,6 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@MaiaGroupCO">
-<meta name="twitter:creator" content="@MaiaGroupCO">
 <meta name="twitter:title" content="Maia Marketing | Growth Systems for Colombia">
 <meta name="twitter:description" content="Specialized growth systems for businesses on Colombia's Caribbean coast.">
 <meta name="twitter:image" content="https://maia-marketing.com/images/og-image.jpg">
@@ -117,12 +114,12 @@ img { max-width: 100%; height: auto; display: block; }
   --border:      #232D3A;
   --border-fine: #1A2330;
 
-  /* Text — WCAG AAA against #080C10 bg */
-  --ink:   #F0F5FA;  /* ~14.6:1 */
-  --ink-2: #C4D4E4;  /* ~10.4:1 */
-  --ink-3: #8FA8C0;  /* ~7.97:1 */
-  --muted: #A3B6CC;  /* ~9.46:1 (was #7F9AB4, 6.71:1 — failed AAA) */
-  --faint: #99B0C8;  /* ~8.79:1 (was #7890A8, 5.94:1 — failed AAA) */
+  /* Text */
+  --ink:   #F0F5FA;
+  --ink-2: #C4D4E4;
+  --ink-3: #8FA8C0;
+  --muted: #7F9AB4;
+  --faint: #7890A8;
 
   /* Teal accent */
   --accent:      #19A898;
@@ -149,7 +146,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ----- BASE ----- */
 html {
   scroll-behavior: smooth;
-  font-size: 17px;
+  font-size: 16px;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -157,8 +154,7 @@ body {
   font-family: var(--sans);
   background: var(--bg);
   color: var(--ink-3);
-  font-weight: 425;
-  line-height: 1.72;
+  line-height: 1.65;
   overflow-x: hidden;
   max-width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -176,14 +172,14 @@ main { overflow-x: hidden; max-width: 100%; }
 .section-label {
   display: inline-flex;
   align-items: center;
-  gap: .6rem;
+  gap: .5rem;
   font-family: var(--mono);
-  font-size: clamp(.85rem, 1vw, 1rem);
-  font-weight: 700;
+  font-size: .62rem;
+  font-weight: 500;
   color: var(--accent);
   letter-spacing: .1em;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: .85rem;
 }
 .section-label::before {
   content: '';
@@ -206,8 +202,8 @@ main { overflow-x: hidden; max-width: 100%; }
 
 .section-sub {
   color: var(--ink-3);
-  font-size: 1rem;
-  font-weight: 425;
+  font-size: .95rem;
+  font-weight: 300;
   max-width: 560px;
   line-height: 1.75;
 }
@@ -301,12 +297,12 @@ main { overflow-x: hidden; max-width: 100%; }
 .nav-wordmark-primary em { font-style: italic; color: var(--accent); }
 .nav-wordmark-sub {
   font-family: var(--mono);
-  font-size: .78rem;
-  font-weight: 500;
+  font-size: .58rem;
+  font-weight: 400;
   color: var(--muted);
   letter-spacing: .06em;
   line-height: 1.2;
-  margin-top: .15rem;
+  margin-top: .1rem;
 }
 
 .nav-links {
@@ -416,7 +412,7 @@ main { overflow-x: hidden; max-width: 100%; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 5.5rem 1.25rem 2.25rem;
+  padding: 7rem 1.25rem 5rem;
   overflow: hidden;
 }
 
@@ -457,13 +453,13 @@ main { overflow-x: hidden; max-width: 100%; }
   align-items: center;
   gap: .5rem;
   font-family: var(--mono);
-  font-size: clamp(.85rem, 1.1vw, 1rem);
-  font-weight: 700;
+  font-size: .65rem;
+  font-weight: 500;
   color: var(--accent);
   letter-spacing: .08em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
-  padding: .55rem 1.1rem .55rem .85rem;
+  padding: .4rem .9rem .4rem .6rem;
   border: 1px solid var(--accent-wash);
   border-radius: 100px;
   background: var(--accent-wash);
@@ -499,7 +495,7 @@ main { overflow-x: hidden; max-width: 100%; }
 .hero-sub {
   color: var(--ink-3);
   font-size: clamp(.9rem, 1.6vw, 1.05rem);
-  font-weight: 400;
+  font-weight: 300;
   max-width: 580px;
   line-height: 1.75;
   margin-bottom: 2.2rem;
@@ -509,7 +505,7 @@ main { overflow-x: hidden; max-width: 100%; }
   display: flex;
   flex-wrap: wrap;
   gap: .85rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 3rem;
 }
 
 /* Social proof bar */
@@ -523,8 +519,7 @@ main { overflow-x: hidden; max-width: 100%; }
 }
 .hero-proof-label {
   font-family: var(--mono);
-  font-size: clamp(.78rem, .95vw, .85rem);
-  font-weight: 600;
+  font-size: .6rem;
   color: var(--muted);
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -534,13 +529,13 @@ main { overflow-x: hidden; max-width: 100%; }
 .proof-badge {
   display: inline-flex;
   align-items: center;
-  gap: .4rem;
-  padding: .5rem 1rem;
+  gap: .35rem;
+  padding: .3rem .7rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 100px;
-  font-size: clamp(.85rem, 1vw, .95rem);
-  font-weight: 600;
+  font-size: .72rem;
+  font-weight: 500;
   color: var(--ink-2);
   white-space: nowrap;
 }
@@ -553,19 +548,19 @@ main { overflow-x: hidden; max-width: 100%; }
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 6rem 2.5rem 3rem; }
+  .hero { padding: 8rem 2.5rem 6rem; }
 }
 
 /* ----- ADVANTAGE (WHY MAIA) ----- */
 .advantage {
-  padding: 3rem 1.25rem;
+  padding: 5.5rem 1.25rem;
   background: var(--surface);
   border-top: 1px solid var(--border-fine);
   border-bottom: 1px solid var(--border-fine);
 }
 
 .advantage-header {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 
 .advantage-grid {
@@ -617,17 +612,17 @@ main { overflow-x: hidden; max-width: 100%; }
   .advantage-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .advantage { padding: 3.5rem 2.5rem; }
+  .advantage { padding: 6.5rem 2.5rem; }
   .advantage-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ----- SERVICES ----- */
 .services {
-  padding: 3rem 1.25rem;
+  padding: 5.5rem 1.25rem;
 }
 
 .services-header {
-  margin-bottom: 1.75rem;
+  margin-bottom: 3rem;
 }
 
 .services-grid {
@@ -704,19 +699,19 @@ main { overflow-x: hidden; max-width: 100%; }
   .services-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .services { padding: 3.5rem 2.5rem; }
+  .services { padding: 6.5rem 2.5rem; }
 }
 
 /* ----- CASE STUDIES ----- */
 .case-studies {
-  padding: 3rem 1.25rem;
+  padding: 5.5rem 1.25rem;
   background: var(--surface);
   border-top: 1px solid var(--border-fine);
   border-bottom: 1px solid var(--border-fine);
 }
 
 .case-studies-header {
-  margin-bottom: 1.75rem;
+  margin-bottom: 3rem;
 }
 
 .cs-grid {
@@ -805,16 +800,16 @@ main { overflow-x: hidden; max-width: 100%; }
   .cs-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .case-studies { padding: 3.5rem 2.5rem; }
+  .case-studies { padding: 6.5rem 2.5rem; }
   .cs-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ----- INDUSTRIES ----- */
 .industries {
-  padding: 3rem 1.25rem;
+  padding: 5.5rem 1.25rem;
 }
 
-.industries-header { margin-bottom: 1.75rem; }
+.industries-header { margin-bottom: 3rem; }
 
 .ind-grid {
   display: grid;
@@ -867,23 +862,23 @@ main { overflow-x: hidden; max-width: 100%; }
   .ind-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .industries { padding: 3.5rem 2.5rem; }
+  .industries { padding: 6.5rem 2.5rem; }
 }
 
 /* ----- PRICING ----- */
 .pricing {
-  padding: 3rem 1.25rem;
+  padding: 5.5rem 1.25rem;
   background: var(--surface);
   border-top: 1px solid var(--border-fine);
   border-bottom: 1px solid var(--border-fine);
 }
 .pricing-header { margin-bottom: .75rem; }
 .pricing-sub {
-  font-size: .95rem;
+  font-size: .88rem;
   color: var(--ink-3);
   max-width: 560px;
   line-height: 1.7;
-  margin-bottom: 1.75rem;
+  margin-bottom: 3rem;
 }
 
 .pricing-grid {
@@ -1001,14 +996,14 @@ main { overflow-x: hidden; max-width: 100%; }
   .pricing-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
-  .pricing { padding: 3.5rem 2.5rem; }
+  .pricing { padding: 6.5rem 2.5rem; }
 }
 
 /* ----- CONTACT / AUDIT ----- */
 .contact {
-  padding: 3rem 1.25rem;
+  padding: 5.5rem 1.25rem;
 }
-.contact-header { margin-bottom: 1.75rem; }
+.contact-header { margin-bottom: 3rem; }
 
 .contact-wrap {
   display: grid;
@@ -1232,7 +1227,7 @@ main { overflow-x: hidden; max-width: 100%; }
 .contact-detail-row svg { color: var(--accent); flex-shrink: 0; }
 
 @media (min-width: 768px) {
-  .contact { padding: 3.5rem 2.5rem; }
+  .contact { padding: 6.5rem 2.5rem; }
   .contact-wrap { grid-template-columns: 1fr 380px; }
   .audit-form-box { padding: 2.25rem 2rem; }
 }
@@ -1241,7 +1236,7 @@ main { overflow-x: hidden; max-width: 100%; }
 footer {
   background: var(--surface);
   border-top: 1px solid var(--border-fine);
-  padding: 2rem 1.25rem 1.5rem;
+  padding: 3rem 1.25rem 2rem;
   overflow: hidden;
 }
 
@@ -1255,34 +1250,33 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
-  padding-bottom: 1.25rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--border-fine);
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .footer-brand { max-width: 320px; }
 .footer-brand-logo {
   font-family: var(--serif);
-  font-size: 1.45rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: var(--ink);
   letter-spacing: -0.02em;
   margin-bottom: .45rem;
 }
 .footer-brand-logo em { font-style: italic; color: var(--accent); }
 .footer-brand p {
-  font-size: .95rem;
-  font-weight: 425;
-  color: var(--ink-2);
+  font-size: .8rem;
+  color: var(--muted);
   line-height: 1.65;
   margin-top: .5rem;
 }
 
 .footer-links-col h5 {
   font-family: var(--mono);
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--ink-2);
+  font-size: .62rem;
+  font-weight: 500;
+  color: var(--muted);
   letter-spacing: .1em;
   text-transform: uppercase;
   margin-bottom: .85rem;
@@ -1291,12 +1285,11 @@ footer {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: .55rem;
+  gap: .45rem;
 }
 .footer-links-col ul a {
-  font-size: .95rem;
-  font-weight: 500;
-  color: var(--ink-2);
+  font-size: .82rem;
+  color: var(--ink-3);
   text-decoration: none;
   transition: color .2s;
 }
@@ -1311,20 +1304,18 @@ footer {
 }
 .footer-copy {
   font-family: var(--mono);
-  font-size: .85rem;
-  font-weight: 500;
-  color: var(--ink-2);
-  line-height: 1.65;
+  font-size: .62rem;
+  color: var(--muted);
+  line-height: 1.6;
 }
 .footer-legal {
   font-family: var(--mono);
-  font-size: .8rem;
-  font-weight: 500;
-  color: var(--ink-3);
+  font-size: .6rem;
+  color: var(--faint);
 }
 
 @media (min-width: 768px) {
-  footer { padding: 2.5rem 2.5rem 1.75rem; }
+  footer { padding: 4rem 2.5rem 2.5rem; }
 }
 
 /* ----- WHATSAPP FAB ----- */
@@ -1393,7 +1384,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
     <li><a href="#services"><span data-lang="en" style="display:none">Services</span><span data-lang="es">Servicios</span></a></li>
     <li><a href="#case-studies"><span data-lang="en" style="display:none">Case Studies</span><span data-lang="es">Casos de Estudio</span></a></li>
     <li><a href="#industries"><span data-lang="en" style="display:none">Industries</span><span data-lang="es">Industrias</span></a></li>
-    <li><a href="#case-studies" class="nav-cta"><span data-lang="en" style="display:none">See Our Results →</span><span data-lang="es">Ver Resultados →</span></a></li>
+    <li><a href="#contact" class="nav-cta"><span data-lang="en" style="display:none">Get Free Audit →</span><span data-lang="es">Auditoría Gratis →</span></a></li>
   </ul>
   <button id="langToggle" data-current="es" onclick="toggleLang()" class="lang-toggle" aria-label="EN ES language toggle"><span class="lt-en">EN</span> | <span class="lt-es">ES</span></button>
   <button class="mobile-toggle" id="mobileToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
@@ -1409,7 +1400,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
   <a href="#case-studies" onclick="closeMenu()"><span data-lang="en" style="display:none">Case Studies</span><span data-lang="es">Casos de Estudio</span></a>
   <a href="#industries" onclick="closeMenu()"><span data-lang="en" style="display:none">Industries</span><span data-lang="es">Industrias</span></a>
   <a href="#pricing" onclick="closeMenu()"><span data-lang="en" style="display:none">Pricing</span><span data-lang="es">Precios</span></a>
-  <a href="#case-studies" onclick="closeMenu()" class="mobile-cta"><span data-lang="en" style="display:none">See Our Results →</span><span data-lang="es">Ver Resultados →</span></a>
+  <a href="#contact" onclick="closeMenu()" class="mobile-cta"><span data-lang="en" style="display:none">Get Free Audit →</span><span data-lang="es">Auditoría Gratis →</span></a>
 </div>
 
 <main id="main">
@@ -1423,20 +1414,21 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
     </div>
 
     <h1 id="hero-heading">
-      <span data-lang="en" style="display:none">More customers.<br>Results you can actually measure.</span><span data-lang="es">Más clientes.<br>Resultados que puedes medir.</span>
+      <span data-lang="en" style="display:none">We Scale Businesses<br>in Colombia.</span><span data-lang="es">Escalamos Negocios<br>en Colombia.</span>
+      <em><span data-lang="en" style="display:none">Real Data. Predictable Revenue.</span><span data-lang="es">Datos Reales. Ingresos Predecibles.</span></em>
     </h1>
 
     <p class="hero-sub">
-      <span data-lang="en" style="display:none">Santa Marta's digital marketing agency for tourism, hospitality, and Caribbean coast businesses. We handle SEO, ads, social, and WhatsApp automation — and we measure everything.</span>
-      <span data-lang="es">Agencia de marketing digital en Santa Marta especializada en turismo, hostelería y negocios en la Costa Caribe. SEO, publicidad, redes sociales y automatización — sin agencias genéricas ni reportes vacíos.</span>
+      <span data-lang="en" style="display:none">Specialized growth systems for tourism operators, professional services, and expat-owned businesses on the Caribbean coast. No guesswork. No vanity metrics. Just systems that fill your calendar and grow your revenue.</span>
+      <span data-lang="es">Sistemas de crecimiento especializados para operadores turísticos, servicios profesionales y negocios de expatriados en la costa Caribe. Sin suposiciones. Sin métricas de vanidad. Solo sistemas que llenan tu agenda y hacen crecer tus ingresos.</span>
     </p>
 
     <div class="hero-ctas">
-      <a href="#case-studies" class="btn-primary">
-        <span data-lang="en" style="display:none">See Our Results →</span><span data-lang="es">Ver Resultados →</span>
+      <a href="#contact" class="btn-primary">
+        <span data-lang="en" style="display:none">Get Your Free Marketing Audit →</span><span data-lang="es">Obtén Tu Auditoría de Marketing Gratis →</span>
       </a>
-      <a href="https://wa.me/19034598763?text=Hola%2C%20me%20interesa%20hablar%20con%20Maia%20Marketing%20sobre%20mi%20negocio." class="btn-ghost" target="_blank" rel="noopener noreferrer">
-        <span data-lang="en" style="display:none">WhatsApp Us</span><span data-lang="es">Hablar por WhatsApp</span>
+      <a href="#case-studies" class="btn-ghost">
+        <span data-lang="en" style="display:none">See Our Work</span><span data-lang="es">Ver Nuestro Trabajo</span>
       </a>
     </div>
 
@@ -1504,8 +1496,8 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
       <h2 class="section-title" id="services-heading"><span data-lang="en" style="display:none">Growth systems, <em>not guesswork.</em></span><span data-lang="es">Sistemas de crecimiento, <em>no suposiciones.</em></span></h2>
     </div>
     <p class="section-sub" style="margin-bottom:2rem;">
-        <span data-lang="en" style="display:none">Four core services. Every one battle-tested on our own 13 brands before we offer it to clients.</span>
-        <span data-lang="es">Cuatro servicios principales. Cada uno probado en nuestras propias 13 marcas antes de ofrecerlo a clientes.</span>
+        <span data-lang="en" style="display:none">Six core services. Every one battle-tested on our own 14 brands before we offer it to clients.</span>
+        <span data-lang="es">Seis servicios principales. Cada uno probado en nuestras propias 14 marcas antes de ofrecerlo a clientes.</span>
       </p>
     <div class="services-grid">
 
@@ -1853,7 +1845,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
     <div class="contact-wrap">
 
       <!-- Multi-step form -->
-      <form class="audit-form-box reveal" name="marketing-audit" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" aria-label="Marketing Enquiry Form">
+      <form aria-label='Free Marketing Audit Request' class='audit-form-box reveal' method='POST' name='marketing-audit' onsubmit='return false;'>
         <input type="hidden" name="form-name" value="marketing-audit">
         <p class="hidden-field"><label>Do not fill this out <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <!-- Step indicator -->
@@ -1867,13 +1859,13 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
         <div class="form-step active" id="step1">
           <div class="form-title"><span data-lang="en" style="display:none">Tell us about your business</span><span data-lang="es">Cuéntanos sobre tu negocio</span></div>
           <div class="form-group">
-            <label for="website"><span data-lang="en" style="display:none">Your business website URL</span><span data-lang="es">URL del sitio web de tu empresa</span></label>
-            <input type="url" id="website" name="website" placeholder="https://tuempresa.com" autocomplete="url">
+            <label for="website">Your business website URL</label>
+            <input type="url" id="website" name="website" placeholder="https://yourbusiness.com" autocomplete="url">
           </div>
           <div class="form-group">
-            <label for="goal"><span data-lang="en" style="display:none">What's your primary goal right now?</span><span data-lang="es">¿Cuál es tu objetivo principal en este momento?</span></label>
+            <label for="goal">What's your primary goal right now?</label>
             <select id="goal" name="goal">
-              <option value="" disabled selected>Selecciona tu objetivo principal…</option>
+              <option value="" disabled selected>Select your main goal…</option>
               <option value="more-leads">More leads &amp; inquiries</option>
               <option value="better-conversions">Better conversions from existing traffic</option>
               <option value="local-visibility">Local visibility &amp; Google Maps</option>
@@ -1882,7 +1874,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
             </select>
           </div>
           <div class="form-btn-row">
-            <button type="button" class="btn-form-next" onclick="nextStep()"><span data-lang="en" style="display:none">Next: Contact Details →</span><span data-lang="es">Siguiente: Datos de Contacto →</span></button>
+            <button type="button" class="btn-form-next" onclick="nextStep()">Next: Contact Details →</button>
           </div>
         </div>
 
@@ -1895,7 +1887,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
           </div>
           <div class="form-group">
             <label for="whatsapp">WhatsApp number</label>
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+57 300 000 0000" autocomplete="tel">
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+57 319 596 2773" autocomplete="tel">
           </div>
           <div class="form-group">
             <label for="language">Preferred language</label>
@@ -1922,8 +1914,8 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
         </div>
 
         <!-- WhatsApp direct link -->
-        <a href="https://wa.me/19034598763?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20auditor%C3%ADa%20de%20marketing%20gratuita%20para%20mi%20negocio." class="wa-direct" target="_blank" rel="noopener noreferrer">
-          <span data-lang="en" style="display:none">Prefer WhatsApp? Message us directly →</span><span data-lang="es">¿Prefieres WhatsApp? Escríbenos directamente →</span>
+        <a href="https://wa.me/19034598763?text=Hi%2C%20I%27d%20like%20to%20request%20a%20free%20marketing%20audit%20for%20my%20business." class="wa-direct" target="_blank" rel="noopener noreferrer">
+          <span data-lang="en" style="display:none">Prefer WhatsApp? Message us directly â†’</span><span data-lang="es">Â¿Prefieres WhatsApp? EscrÃ­benos directamente â†’</span>
         </a>
       </form>
 
@@ -1933,7 +1925,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
           <h3>Direct Contact</h3>
           <div class="contact-detail-row">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="https://wa.me/19034598763?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20Maia%20Marketing." target="_blank" rel="noopener noreferrer">WhatsApp +1 903 459 8763</a>
+            <a href="https://wa.me/19034598763?text=Hi%2C%20I%27d%20like%20to%20talk%20about%20Maia%20Marketing." target="_blank" rel="noopener noreferrer">WhatsApp +1 903 459 8763</a>
           </div>
           <div class="contact-detail-row">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1941,16 +1933,16 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
           </div>
           <div class="contact-detail-row" style="margin-top:.25rem;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.18a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <a href="https://wa.me/19034598763" target="_blank" rel="noopener">WhatsApp: +1 903 459 8763</a>
+            <a href="https://wa.me/19034598763" target="_blank" rel="noopener">WhatsApp: +57 319 596 2773</a>
           </div>
         </div>
         <div class="contact-info-card reveal">
-          <h3><span data-lang="en" style="display:none">What Happens Next</span><span data-lang="es">¿Qué Sigue?</span></h3>
-          <p><span data-lang="en" style="display:none">1. Submit your audit request above.<br>2. We review your current digital presence within 24h.<br>3. You receive a personalised audit with specific opportunities — no generic reports.<br>4. We hop on a WhatsApp call to walk you through it. Zero pressure, zero obligation.</span><span data-lang="es">1. Envía tu solicitud de auditoría arriba.<br>2. Revisamos tu presencia digital actual en 24h.<br>3. Recibes una auditoría personalizada con oportunidades específicas — sin informes genéricos.<br>4. Hacemos una llamada por WhatsApp para explicártela. Cero presión, cero compromiso.</span></p>
+          <h3><span data-lang="en" style="display:none">What Happens Next</span><span data-lang="es">Â¿QuÃ© Sigue?</span></h3>
+          <p><span data-lang="en" style="display:none">1. Submit your audit request above.<br>2. We review your current digital presence within 24h.<br>3. You receive a personalised audit with specific opportunities â€” no generic reports.<br>4. We hop on a WhatsApp call to walk you through it. Zero pressure, zero obligation.</span><span data-lang="es">1. EnvÃ­a tu solicitud de auditorÃ­a arriba.<br>2. Revisamos tu presencia digital actual en 24h.<br>3. Recibes una auditorÃ­a personalizada con oportunidades especÃ­ficas â€” sin informes genÃ©ricos.<br>4. Hacemos una llamada por WhatsApp para explicÃ¡rtela. Cero presiÃ³n, cero compromiso.</span></p>
         </div>
         <div class="contact-info-card reveal">
           <h3><span data-lang="en" style="display:none">Response Time</span><span data-lang="es">Tiempo de Respuesta</span></h3>
-          <p><span data-lang="en" style="display:none">We respond to all audit requests within <strong style="color:var(--ink-2)">24 business hours</strong>. For urgent inquiries, WhatsApp is fastest.</span><span data-lang="es">Respondemos todas las solicitudes de auditoría en <strong style="color:var(--ink-2)">24 horas hábiles</strong>. Para consultas urgentes, WhatsApp es lo más rápido.</span></p>
+          <p><span data-lang="en" style="display:none">We respond to all audit requests within <strong style="color:var(--ink-2)">24 business hours</strong>. For urgent inquiries, WhatsApp is fastest.</span><span data-lang="es">Respondemos todas las solicitudes de auditorÃ­a en <strong style="color:var(--ink-2)">24 horas hÃ¡biles</strong>. Para consultas urgentes, WhatsApp es lo mÃ¡s rÃ¡pido.</span></p>
         </div>
       </div>
 
@@ -1963,7 +1955,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-architecture" style="padding:1.75rem 0 1.25rem;border-bottom:1px solid rgba(128,128,128,0.15)">
+    <div class="footer-architecture" style="padding:3rem 0 2rem;border-bottom:1px solid rgba(128,128,128,0.15)">
       <div style="max-width:780px;margin:0 auto;text-align:center">
         <p style="font-size:0.95rem;letter-spacing:0.02em;color:var(--ink-2);margin:0 0 1rem;font-weight:500">
           <span data-lang="en" style="display:none">Maia Marketing operates on the Maia Group infrastructure.</span>
@@ -1971,32 +1963,32 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
         </p>
         <p style="font-size:0.85rem;line-height:1.7;color:var(--ink-3);margin:0 0 2rem;font-weight:300">
           <span data-lang="en" style="display:none">We provide unified legal, operational, and physical assets for foreign capital, expats, and enterprise clients scaling in Colombia. One ecosystem. Absolute accountability.</span>
-          <span data-lang="es">Proveemos activos legales, operacionales y físicos unificados para capital extranjero, expatriados y clientes empresariales que escalan en Colombia. Un ecosistema. Responsabilidad absoluta.</span>
+          <span data-lang="es">Proveemos activos legales, operacionales y fÃ­sicos unificados para capital extranjero, expatriados y clientes empresariales que escalan en Colombia. Un ecosistema. Responsabilidad absoluta.</span>
         </p>
-        <nav class="footer-utility-nav" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0;font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3)">
+        <nav class="footer-utility-nav" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:#888">
           <a href="https://maia-legal.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Legal Infrastructure</span><span data-lang="es">Infraestructura Legal</span></a>
-          <a href="https://maia-management.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Talent Management</span><span data-lang="es">Gestión de Talento</span></a>
-          <a href="https://maia-realty.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Real Estate</span><span data-lang="es">Bienes Raíces</span></a>
+          <a href="https://maia-management.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Talent Management</span><span data-lang="es">GestiÃ³n de Talento</span></a>
+          <a href="https://maia-realty.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Real Estate</span><span data-lang="es">Bienes RaÃ­ces</span></a>
           <a href="https://lleva-lleva.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">B2B Procurement</span><span data-lang="es">Abastecimiento B2B</span></a>
-          <a href="https://maia-masters.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Corporate Education</span><span data-lang="es">Educación Corporativa</span></a>
+          <a href="https://maia-masters.com" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem;border-right:1px solid rgba(128,128,128,0.2)"><span data-lang="en" style="display:none">Corporate Education</span><span data-lang="es">EducaciÃ³n Corporativa</span></a>
           <a href="https://the-maia-group.com/" target="_blank" rel="noopener" style="color:var(--ink-3);text-decoration:none;padding:0.25rem 1rem"><span data-lang="en" style="display:none">Private Portfolio</span><span data-lang="es">Portafolio Privado</span></a>
         </nav>
       </div>
     </div>
 
-    <div class="footer-bottom" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1.5rem;padding:2rem 0 1.5rem;font-size:0.9rem;font-weight:500;color:var(--ink-3);line-height:1.7">
+    <div class="footer-bottom" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:1.5rem;padding:2rem 0 1.5rem;font-size:0.75rem;color:#777;line-height:1.7">
       <div class="footer-copy">
         <div style="font-weight:500;color:var(--ink-2);margin-bottom:0.25rem">Maia Marketing</div>
-        <span data-lang="en" style="display:none">A division of Maia Management Group S.A.S.</span><span data-lang="es">Una división de Maia Management Group S.A.S.</span><br>
-        NIT 901.862.977-7 · Santa Marta, Magdalena, Colombia<br>
+        <span data-lang="en" style="display:none">A division of Maia Management Group S.A.S.</span><span data-lang="es">Una divisiÃ³n de Maia Management Group S.A.S.</span><br>
+        NIT 901.862.977-7 Â· Santa Marta, Magdalena, Colombia<br>
         marketing.maia-management.com
       </div>
       <div class="footer-legal" style="text-align:right">
         <a href="/privacy" style="color:var(--ink-3);text-decoration:none;margin-left:1rem"><span data-lang="en" style="display:none">Privacy</span><span data-lang="es">Privacidad</span></a>
-        <a href="/terms" style="color:var(--ink-3);text-decoration:none;margin-left:1rem"><span data-lang="en" style="display:none">Terms</span><span data-lang="es">Términos</span></a>
+        <a href="/terms" style="color:var(--ink-3);text-decoration:none;margin-left:1rem"><span data-lang="en" style="display:none">Terms</span><span data-lang="es">TÃ©rminos</span></a>
         <button type="button" onclick="if(window.MaiaConsent)window.MaiaConsent.reopenBanner();" style="color:var(--ink-3);background:none;border:0;padding:0;font:inherit;cursor:pointer;margin-left:1rem"><span data-lang="en" style="display:none">Cookie Preferences</span><span data-lang="es">Preferencias de Cookies</span></button>
         <a href="#contact" style="color:var(--ink-3);text-decoration:none;margin-left:1rem"><span data-lang="en" style="display:none">Contact</span><span data-lang="es">Contacto</span></a>
-        <div style="margin-top:0.75rem;font-size:0.85rem;font-weight:500;color:var(--ink-3)">© 2026 Maia Management Group S.A.S. · <span data-lang="en" style="display:none">All rights reserved</span><span data-lang="es">Todos los derechos reservados</span>.</div>
+        <div style="margin-top:0.75rem;font-size:0.75rem;color:var(--ink-3)">Â© 2026 Maia Management Group S.A.S. Â· <span data-lang="en" style="display:none">All rights reserved</span><span data-lang="es">Todos los derechos reservados</span>.</div>
       </div>
     </div>
   </div>
@@ -2065,7 +2057,7 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
     step2.classList.add('active');
     dot1.classList.remove('active');
     dot1.classList.add('done');
-    dot1.textContent = '✓';
+    dot1.textContent = 'âœ“';
     dot2.classList.add('active');
     currentStep = 2;
   };
@@ -2105,11 +2097,11 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
     payload.set('whatsapp', whatsapp);
     payload.set('language', language);
 
-    var msg = '\u00a1Hola! Me gustar\u00eda una auditor\u00eda de marketing gratuita para mi negocio.' +
-      (website ? '\nSitio web: ' + website : '') +
-      '\nObjetivo: ' + goal +
-      '\nNombre: ' + name +
-      '\nIdioma: ' + language;
+    var msg = 'Hi! I\u2019d like a free marketing audit for my business.' +
+      (website ? '\nWebsite: ' + website : '') +
+      '\nGoal: ' + goal +
+      '\nName: ' + name +
+      '\nLanguage: ' + language;
     var waUrl = 'https://wa.me/19034598763?text=' + encodeURIComponent(msg);
 
     fetch('/', {
@@ -2164,3 +2156,4 @@ html:not(.js-ready) .reveal { opacity: 1 !important; transform: none !important;
 
 </body>
 </html>
+
