@@ -29,6 +29,12 @@
   force = true
 
 [[redirects]]
+  from = "https://marketing.maia-management.com/*"
+  to = "https://maia-marketing.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/index.html"
   to = "/"
   status = 301
@@ -43,6 +49,12 @@
 [[redirects]]
   from = "/images/2026-04-26_maia-marketing_imagen_team-creative-session.png"
   to = "/images/maia-marketing-team.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/images/people/andrew-luz-marketing.png"
+  to = "/images/people/andrew-luz-marketing.webp"
   status = 301
   force = true
 
