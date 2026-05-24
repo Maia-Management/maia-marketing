@@ -1,0 +1,16 @@
+{
+  "name": "Maia Marketing",
+  "short_name": "Maia Marketing",
+  "description": "Sistemas de crecimiento digital para Colombia — SEO, publicidad, WhatsApp y diseño web de conversión.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#080C10",
+  "theme_color": "#0B0F14",
+  "lang": "es",
+  "dir": "ltr",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180", "purpose": "any" }
+  ]
+}
