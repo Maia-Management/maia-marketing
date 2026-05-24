@@ -40,6 +40,35 @@
   status = 301
   force = true
 
+# Legacy ?lang=en URLs → standalone /en/ route (separately-indexable English page).
+[[redirects]]
+  from = "/"
+  query = {lang = "en"}
+  to = "/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  query = {lang = "en"}
+  to = "/en/"
+  status = 301
+  force = true
+
+# Symmetric: legacy ?lang=es on /en/ → root.
+[[redirects]]
+  from = "/en/"
+  query = {lang = "es"}
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/index.html"
+  to = "/en/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/favicon.ico"
   to = "/favicon.svg"
@@ -71,4 +100,9 @@
 [[redirects]]
   from = "/thank-you"
   to = "/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/thank-you"
+  to = "/en/thank-you.html"
   status = 200
