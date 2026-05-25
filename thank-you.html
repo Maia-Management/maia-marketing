@@ -19,24 +19,31 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://maia-marketing.com/images/og-image.jpg">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<meta name="theme-color" content="#0B0F14">
+<meta name="theme-color" content="#0F0F0F">
+
+<!-- Fonts — Maia family system: Cormorant + Instrument Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Instrument+Sans:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet"></noscript>
 
 <style>
 :root {
-  --bg:          #080C10;
-  --surface:     #0F1419;
-  --surface-2:   #161D26;
-  --border:      #232D3A;
-  --ink:         #F0F5FA;
-  --ink-2:       #C4D4E4;
-  --ink-3:       #8FA8C0;
-  --accent:      #22BFB0;
-  --accent-soft: #43D6C8;
-  --accent-glow: rgba(34,191,176,0.18);
-  --button-bg:   #0F766E;
-  --button-bg-hover: #0B6B62;
-  --serif: Georgia, 'Times New Roman', serif;
-  --sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  /* Dark palette — Maia family (gold system) */
+  --bg:          #0F0F0F;
+  --surface:     #161616;
+  --surface-2:   #1A1A1A;
+  --border:      rgba(255,255,255,0.10);
+  --ink:         #EAE6E0;
+  --ink-2:       #C8C4BC;
+  --ink-3:       #A09B92;
+  --accent:      #A8906A;
+  --accent-soft: #B9A07A;
+  --accent-glow: rgba(168,144,106,0.18);
+  --button-bg:   #A8906A;
+  --button-bg-hover: #B9A07A;
+  --serif: 'Cormorant', Georgia, 'Times New Roman', serif;
+  --sans:  'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   --radius: 8px;
 }
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -59,7 +66,7 @@ a { color: var(--accent); }
 .site-header {
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid var(--border);
-  background: rgba(8,12,16,0.85);
+  background: rgba(15,15,15,0.85);
   backdrop-filter: blur(8px);
 }
 .site-header-inner {
@@ -167,7 +174,7 @@ main { flex: 1; padding: 4rem 1.5rem; }
   transition: all 0.25s ease;
   border: 1px solid transparent;
 }
-.btn-primary { background: var(--button-bg); color: #fff; }
+.btn-primary { background: var(--button-bg); color: var(--bg); }
 .btn-primary:hover { background: var(--button-bg-hover); transform: translateY(-1px); }
 .btn-secondary { background: transparent; color: var(--ink-2); border-color: var(--border); }
 .btn-secondary:hover { color: var(--ink); border-color: var(--accent); }
@@ -248,6 +255,7 @@ footer {
         <nav class="footer-utility-nav">
           <a href="https://maia-legal.com" target="_blank" rel="noopener">Infraestructura Legal</a>
           <a href="https://maia-management.com" target="_blank" rel="noopener">Gestión de Talento</a>
+          <a href="https://maia-recruitment.com" target="_blank" rel="noopener">Reclutamiento</a>
           <a href="https://maia-realty.com" target="_blank" rel="noopener">Bienes Raíces</a>
           <a href="https://lleva-lleva.com" target="_blank" rel="noopener">Marketplace</a>
           <a href="https://maia-masters.com" target="_blank" rel="noopener">Educación Corporativa</a>
