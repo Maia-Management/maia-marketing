@@ -3,3 +3,9 @@ node_modules/
 .env
 .netlify/
 
+
+# Internal audit/strategy docs — never deploy (publish dir = repo root)
+AUDIT*.md
+DEEP-AUDIT*.md
+SITE-AUDIT*.md
+FINAL-AUDIT*.md
