@@ -52,8 +52,18 @@
     signals: {
       GRANTED: 'granted',
       DENIED:  'denied'
-    }
+    },
+    google: {
+      // TODO(Andrew): real GA4 + DEDICATED Google Ads id (do NOT reuse AW-17992921547) + conversion send_to.
+      analyticsId:      'G-XXXXXXXXXX',
+      adsId:            'AW-XXXXXXXXXX',
+      conversionSendTo: 'AW-XXXXXXXXXX/yyyy'
+    },
+    // TODO(Andrew): real Meta/Instagram Pixel id. Dormant until set.
+    metaPixelId: 'XXXXXXXXXXXXXXX'
   };
+
+  function isPlaceholder(v) { return !v || v.indexOf('XXXX') !== -1; }
 
   /* ── 1. DATAAYER / GTAG BOOTSTRAP ── */
   window.dataLayer = window.dataLayer || [];
@@ -74,6 +84,38 @@
     'consent_ad_user_data':         'denied',
     'consent_ad_personalization':   'denied'
   });
+
+  /* ── 1b. GOOGLE TAG + META PIXEL LOADERS (consent-gated; dormant until real ids) ── */
+  var GoogleTags = {
+    loaded: false, cfgAnalytics: false, cfgAds: false,
+    load: function (prefs) {
+      if (!prefs || (!prefs.analytics && !prefs.ads)) return;
+      var anaReal = !isPlaceholder(CONFIG.google.analyticsId);
+      var adsReal = !isPlaceholder(CONFIG.google.adsId);
+      if (!anaReal && !adsReal) return;
+      if (!GoogleTags.loaded) {
+        GoogleTags.loaded = true;
+        var primary = anaReal ? CONFIG.google.analyticsId : CONFIG.google.adsId;
+        var s = document.createElement('script'); s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(primary);
+        (document.head || document.getElementsByTagName('head')[0]).appendChild(s);
+        window.gtag('js', new Date());
+      }
+      if (prefs.analytics && anaReal && !GoogleTags.cfgAnalytics) { GoogleTags.cfgAnalytics = true; window.gtag('config', CONFIG.google.analyticsId); }
+      if (prefs.ads && adsReal && !GoogleTags.cfgAds) { GoogleTags.cfgAds = true; window.gtag('config', CONFIG.google.adsId); }
+    }
+  };
+  function loadMetaPixel(adsGranted) {
+    if (!adsGranted || isPlaceholder(CONFIG.metaPixelId) || window.__mmPixelLoaded) return;
+    window.__mmPixelLoaded = true;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('consent','grant'); window.fbq('init', CONFIG.metaPixelId); window.fbq('track','PageView');
+  }
+  function mmTrack(gaEvent, gaParams, fbEvent) {
+    try { window.gtag('event', gaEvent, gaParams || {}); } catch (e) {}
+    try { if (typeof window.fbq === 'function' && fbEvent) window.fbq('track', fbEvent); } catch (e) {}
+    if (CONFIG.google.conversionSendTo && !isPlaceholder(CONFIG.google.conversionSendTo)) { try { window.gtag('event','conversion',{ send_to: CONFIG.google.conversionSendTo }); } catch (e) {} }
+  }
 
   /* ── 2. STORAGE HELPERS ── */
   var Storage = {
@@ -120,6 +162,8 @@
         'consent_version':             CONFIG.version,
         'consent_timestamp':           new Date().getTime()
       });
+      GoogleTags.load(prefs);
+      loadMetaPixel(prefs.ads);
       ConsentDispatcher._dispatchFbq(prefs.ads);
     },
     _dispatchFbq: function (granted) {
@@ -274,8 +318,16 @@
   window.MaiaConsent = {
     reopenBanner: function () { Storage.clear(); BannerController.showBanner(); },
     getConsent:   function () { return Storage.load(); },
-    setConsent:   function (prefs) { Storage.save(prefs); ConsentDispatcher.update(prefs); }
+    setConsent:   function (prefs) { Storage.save(prefs); ConsentDispatcher.update(prefs); },
+    trackConversion: function (label) { mmTrack('generate_lead', { event_category: 'lead', event_label: label || 'lead' }, 'Lead'); }
   };
+
+  /* ── conversion events (delegated; harmless before tags are live) ── */
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
+    if (a) mmTrack('whatsapp_click', { event_category: 'lead', event_label: 'whatsapp' }, 'Lead');
+  }, true);
+  document.addEventListener('submit', function () { mmTrack('form_submit', { event_category: 'lead' }, 'Lead'); }, true);
 
   /* ── 9. BOOTSTRAP ── */
   function bootstrap() {
