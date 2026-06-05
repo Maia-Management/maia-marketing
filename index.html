@@ -110,10 +110,16 @@ img { max-width: 100%; height: auto; display: block; }
   --muted: #A3B6CC;
   --faint: #99B0C8;
 
-  /* Teal accent */
-  --accent:      #19A898;
+  /* Teal accent
+     a11y fix 2026-06-04: --accent darkened from #19A898 (3.0:1 vs white on CTAs — fails 1.4.3)
+     to #118075 (4.9:1 vs white). Cascades fix across .nav-cta, .mobile-cta, all
+     conversion CTAs (Ver Resultados, Empezar, Enviar Solicitud de Auditoría, etc).
+     Display variant retained for decorative >=24px headings. P0-5 from
+     LAUNCH-EVE-AUDIT-ACCESSIBILITY-DESIGN-2026-06-03-PM. */
+  --accent:      #118075;
   --accent-soft: #22BFB0;
-  --accent-deep: #118075;
+  --accent-deep: #0C625A;
+  --accent-display: #19A898; /* original lighter teal — reserved for >=24px display only */
   --accent-wash: rgba(25,168,152,0.08);
   --accent-glow: rgba(25,168,152,0.18);
 
